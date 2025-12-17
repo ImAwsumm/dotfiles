@@ -5,19 +5,14 @@ Click [here](#install) to install
 ## requirements
 - an Arch based distribution of linux (Windows will **never** get support)
 - Hyprland isn't required but still recomended in order to benefit from all configurations
-  
+
+### More changes are coming this is only version 1
 
 ## programs modified
 - neovim
 - hyprland
 - waybar
 - gtklock
-- *fastfetch ( not yet)*
-- *kitty (not yet)*
-  
-- *Firefox* (not yet)
-- *LibreWolf* (not yet)
-
 
 ## install
 
