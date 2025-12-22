@@ -8,19 +8,12 @@ Click [here](#install) to install
   
 
 ## programs modified
+*this is only version 1.1 , more changes will come in newer versions*
 - neovim
 - hyprland
 - waybar
 - gtklock
 - fastfetch
-
-
-- *kitty* (not yet)
-- *Firefox* (not planned)
-- *LibreWolf* (not planned)
-- *Floorp* (not planned)
-- *Chromium* (not planned)
-
 
 ## install
 
@@ -47,10 +40,12 @@ A new install script is in the making.  It will run faster because it is in C in
 Useful keybinds to know:
 (super = "Windows key")
  
- super + q -> **execute Kitty**
- super + 1 -> **execute LibreWolf**
+ super + Q -> **execute Kitty**
+  
+ super + 1 -> **execute Floorp**
  super + 2 -> **execute Firefox**
- 
+ super + 3 -> **execute LibreWolf**
+
  
  super + F1 -> **switch to Workspace 1**
  
@@ -59,3 +54,4 @@ Useful keybinds to know:
  super + m -> **exit hyprland**
 
 If you ever encounter an issue please report it by providing the issue you are experiencing with a log, it helps me improve this script. 
+
