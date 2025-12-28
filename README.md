@@ -10,24 +10,16 @@ If you want to update your dotfiles, click [here](#Update)
   
 
 ## programs modified
+this is only version 1.2 , more changes will come in newer versions
 - neovim
 - hyprland
 - waybar
 - gtklock
 - fastfetch
 
-
-- *kitty* (not yet)
-- *Firefox* (not planned)
-- *LibreWolf* (not planned)
-- *Floorp* (not planned)
-- *Chromium* (not planned)
-
-
 ## install
-
-note: this script is still unfinished and you **will** encounter bugs
-
+execute this bash script in order to install the dotfiles
+The bash script is no longer supported, the problems you encounter will not be solved.
 bash script:
 ```sh
 cd ~
