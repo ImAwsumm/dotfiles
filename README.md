@@ -10,17 +10,12 @@ If you want to **update** your dotfiles, click [here](#Update)
   
 
 ## programs modified
+This is only version 1.3 , more changes will come in newer versions.
 - neovim
 - hyprland
 - waybar
 - gtklock
 - fastfetch
-
-- *kitty* (not yet)
-- *Firefox* (not planned)
-- *LibreWolf* (not planned)
-- *Floorp* (not planned)
-- *Chromium* (not planned)
 
 --- 
 
