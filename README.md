@@ -1,4 +1,4 @@
-# ImAwsum's dotfiles
+# ImAwsum's dotfiles v2.0
 Dotfiles are files used to customize your system to your liking.  You can modify them by editing config files using a text editor ([Neovim](https://github.com/neovim/neovim)).
 
 
@@ -21,13 +21,6 @@ If you want to **update** your dotfiles, click [here](#Update)
 - kitty
   - font options
 - gtklock
-  - (lockscreen options coming)
-    
-- *Firefox* (not planned)
-- *LibreWolf* (not planned)
-- *Floorp* (not planned)
-- *Chromium* (not planned)
-
 --- 
 
 ## Install
