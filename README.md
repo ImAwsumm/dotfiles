@@ -19,12 +19,7 @@ If you want to **update** your dotfiles, click [here](#Update)
 - cava
 - fuzzel
 - kitty
-
-  
-- *Firefox* (not planned)
-- *LibreWolf* (not planned)
-- *Floorp* (not planned)
-- *Chromium* (not planned)
+  ( no theme )
 
 --- 
 
