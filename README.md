@@ -2,11 +2,14 @@
 Dotfiles are files used to customize your system to your liking.  You can modify them by editing config files using a text editor ([Neovim](https://github.com/neovim/neovim)).
 
 
+## Version 2.2 is not complete and you will encounter errors
+> click [here](https://github.com/ImAwsumm/dotfiles/tree/main) for the latest version
+
+
 If you want to **install** your dotfiles, click [here](#install)
 
 If you want to **update** your dotfiles, click [here](#Update)
 
-If you want to **configure** your dotfiles, click [here](#Configure)
 
 ## requirements
 - an Arch based distribution of linux (Windows will **never** get support)
@@ -32,7 +35,7 @@ If you want to **configure** your dotfiles, click [here](#Configure)
 
 --- 
 
-## Install
+# Install
 
 >  **Warning** Be careful running scripts found on the internet!
 
@@ -41,16 +44,6 @@ Before executing the c script, you will need to compile it.
 git clone https://github.com/ImAwsumm/dotfiles.git
 gcc dotfiles/c-scripts/install.c -o dotfiles/cinstall
 ./dotfiles/cinstall
-```
-## Configure / Install*
-
-**the script does not install the required packages **yet*** but it installs the dotfiles and it gives the user customization options
-
-This is a script to help new users configure their system to tbeir liking.  
-For now you can only customize your kitty terminal but more features will come in tbe future
-```sh
-gcc dotfiles/c-scripts/setup.c -o dotfiles/setup
-./dotfiles/setup
 ```
 
 ## after install 
