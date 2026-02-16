@@ -17,7 +17,8 @@ int main()
     	char opt_fiv_text[128] = "Something else";
     	char opt_exit_text[128] = "Exit";
     
-    	printf(BOLD_S ANSI_CYAN "%s\n\n" STYLE_END, main_menu_text );
+    	printf(BOLD_S ANSI_CYAN "%s\n" STYLE_END, main_menu_text );
+    	printf(BOLD_S ANSI_CYAN "This is the first stable version (v2.3)\n\n" STYLE_END);
     	printf(BOLD_S " [1] " STYLE_END "%s\n", opt_one_text);
     	printf(BOLD_S " [2] " STYLE_END "%s\n", opt_two_text);
     	printf(BOLD_S " [3] " STYLE_END "%s\n", opt_the_text);
@@ -219,6 +220,7 @@ int main()
     	    		    	        	"ln -fs ~/.config/fastfetch/config-default.jsonc ~/.config/fastfetch/config.jsonc");
     	    		    	        system(cmd);
     	    		    	        printf("\nThe fastfetch config was applied successfully\n");
+
 	    		    		wait_for_timeout();
     	    		    	    }
     	    		    	    else if (link_fastfetch_configs_opt == 2)
@@ -227,6 +229,7 @@ int main()
     	    		    	        	"ln -fs ~/.config/fastfetch/config-other.jsonc ~/.config/fastfetch/config.jsonc");
     	    		    	        system(cmd);
     	    		    	        printf("\nThe fastfetch config was applied successfully\n");
+
 	    		    		wait_for_timeout();
     	    		    	    }
     	    		    	    else if (link_fastfetch_configs_opt == 3)
@@ -234,7 +237,9 @@ int main()
     	    		    	        snprintf(cmd, sizeof(cmd),
     	    		    	        	"ln -fs ~/.config/fastfetch/config-duplicated.jsonc ~/.config/fastfetch/config.jsonc");
     	    		    	        system(cmd);
+
     	    		    	        printf("\nThe fastfetch config was applied successfully\n");
+
 	    		    		wait_for_timeout();
     	    		    	    }
 	    		    	}
@@ -249,7 +254,7 @@ int main()
     	        	int kitty_config_choice;
     	        	do
     	        	{
-	    	    clear();
+			    clear();
     	        	    char kitty_color_text[32] = "Change Kitty color scheme";
     	        	    char kitty_fonts_text[32] = "Change Kitty fonts";
     	        	    
@@ -259,19 +264,19 @@ int main()
     	        	    printf(BOLD_S " [0] " STYLE_END "%s\n", opt_exit_text);
 
 			    while (getchar() != '\n');  // clear imput buffer 
-    	        	    scanf("\n%d", &kitty_config_choice);
+    	        	    scanf("%d", &kitty_config_choice);
 
     	        	    char cmd[24];
     	        	    if (kitty_config_choice == 1)
     	        	    {
     	        	    	snprintf(cmd, 24,
-	    			"kitten themes");
+					"kitten themes");
     	        	    	system(cmd);
     	        	    }
     	        	    if (kitty_config_choice == 2)
     	        	    {
     	        	    	snprintf(cmd, 24,
-	    			"kitty +list-fonts");
+					"kitty +list-fonts");
     	        	    	system(cmd);
     
     	        	    	printf("\nThe install script can be used to install more fonts.");
