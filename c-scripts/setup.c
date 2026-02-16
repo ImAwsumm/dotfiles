@@ -18,7 +18,6 @@ int main()
     	char opt_exit_text[128] = "Exit";
     
     	printf(BOLD_S ANSI_CYAN "%s\n\n" STYLE_END, main_menu_text );
-		printf(BOLD_S ANSI_CYAN "This is the first stable version (v2.3)\n\n" STYLE_END);
     	printf(BOLD_S " [1] " STYLE_END "%s\n", opt_one_text);
     	printf(BOLD_S " [2] " STYLE_END "%s\n", opt_two_text);
     	printf(BOLD_S " [3] " STYLE_END "%s\n", opt_the_text);
@@ -322,18 +321,44 @@ int main()
 			    int fuzzel_edit_menu_choice;
 			    do
 			    {
+				clear();
+				char cmd[256];
 				char fuzzel_config_one[32] = "Use fuzzel-duplicated.ini";
     	                	char fuzzel_config_old[32] = "Use old-fuzzel.ini";
+    	                	char fuzzel_config_vzero[32] = "Use fuzzel-v0.0.ini";
 
 				printf(BOLD_S ANSI_WHITE "%s\n\n"STYLE_END, fuzzel_edit_config_text);
     	            		printf(BOLD_S " [1] " STYLE_END "%s\n", fuzzel_config_one);
     	            		printf(BOLD_S " [2] " STYLE_END "%s\n",	fuzzel_config_old);
+    	            		printf(BOLD_S " [3] " STYLE_END "%s\n",	fuzzel_config_vzero);
     	            		printf(BOLD_S " [0] " STYLE_END "%s\n", opt_exit_text);
+				// might clone this in the future https://github.com/catppuccin/fuzzel.git
 
 				while (getchar() != '\n');  // clear imput buffer 
 				scanf(" %d", &fuzzel_edit_menu_choice);
 
-				// add fuzzel editing  commands here
+				if (fuzzel_edit_menu_choice == 1)
+				{
+				    snprintf(cmd, sizeof(cmd),
+					    "mv ~/.config/fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel-backup.ini && "
+					    "ln -sf ~/.config/fuzzel/fuzzel-duplicated.ini ~/.config/fuzzel/fuzzel.ini");
+				    system(cmd);
+				}
+				else if (fuzzel_edit_menu_choice == 2)
+				{
+				    snprintf(cmd, sizeof(cmd),
+					    "mv ~/.config/fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel-backup.ini && "
+					    "ln -sf ~/.config/fuzzel/old-fuzzel.ini ~/.config/fuzzel/fuzzel.ini");
+				    system(cmd);
+				}
+				else if (fuzzel_edit_menu_choice == 3)
+				{
+				    float pver = 0.0f;
+				    snprintf(cmd, sizeof(cmd),
+					    "mv ~/.config/fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel-backup.ini && "
+					    "ln -sf ~/.config/fuzzel/fuzzel-oldv%.1f.ini ~/.config/fuzzel/fuzzel.ini", pver);
+				    system(cmd);
+				}
 			    }
 			    while (fuzzel_edit_menu_choice > 0);
 			}
@@ -466,7 +491,7 @@ void FAST(char ARCHIVE, float pver, char PKGINSTALL)
 }
 void FUZZ(char ARCHIVE, float pver, char PKGINSTALL)
 {
-    char cmd[256];
+    char cmd[512];
     if (ARCHIVE == 'Y' || ARCHIVE == 'y')
     {
     	// backup fuzzel config
@@ -478,9 +503,11 @@ void FUZZ(char ARCHIVE, float pver, char PKGINSTALL)
     // export fuzzel appearance
     snprintf(cmd, sizeof(cmd),
             "mkdir ~/.config/fuzzel && "
-            "cp -f dotfiles/fuzzel/old-fuzzel.ini && "
-            "cp -f dotfiles/fuzzel/fuzzel.ini "
-	    "~/.config/fuzzel");
+            "cp -f dotfiles/fuzzel/old-fuzzel.ini ~/.config/fuzzel && "
+            "cp -f dotfiles/fuzzel/default-fuzzel.ini ~/.config/fuzzel && "
+            "cp -f dotfiles/fuzzel/fuzzel.ini ~/.config/fuzzel && "
+	    "mv ~/.config/fuzzel/fuzzel.ini ~/.config/fuzzel/fuzzel-duplicated.ini && "
+	    "ln -sf ~/.config/fuzzel/fuzzel-duplicated.ini ~/.config/fuzzel/fuzzel.ini ");
     system(cmd);  		
 }
 void GTKL(char ARCHIVE, float pver, char PKGINSTALL)
