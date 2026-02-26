@@ -1,4 +1,6 @@
 # ImAwsum's dotfiles
+## version ``2.4`` stable
+
 Dotfiles are files used to customize your system to your liking.  You can modify them by editing config files using a text editor ([Neovim](https://github.com/neovim/neovim)).
 
 [Voir cette page en francais][fr]
@@ -71,7 +73,7 @@ Before executing the c script, you will need to compile it.
 This is a script to help new users configure their system to tbeir liking.  
 You can use this script to install your dotfiles, update your dotfiles and configure your environment! 
 
-Makefile coming maybe..
+Makefile is available in any version newer than 2.5
 
 ```sh
 git clone https://github.com/imawsumm/dotfiles
