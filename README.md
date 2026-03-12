@@ -1,4 +1,5 @@
 # ImAwsum's dotfiles
+## this is the version 3.0 stable it is fully functional but doesn't have the latest features
 Dotfiles are files used to customize your system to your liking.  You can modify them by editing config files using a text editor ([Neovim](https://github.com/neovim/neovim)).
 
 [Voir cette page en francais][fr]
